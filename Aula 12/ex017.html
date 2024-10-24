@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da semana</title>
+    <style>
+        h1{
+            font:normal 20pt Arial;
+        }
+        body{
+            font:normal 18pt Arial;
+        }
+    </style>
+<h1>Dia:</h1>
+<div name = "txtd" id = "txtd">
+    
+</div>
+
+ <div id = "res">
+
+    </div>
+
+</head>
+<body>
+    <script>
+        var agora = new Date()
+        var diaSem = agora.getDay(txtd)
+        var corpo = document.body
+        switch(diaSem){
+    case 0 :
+        res.innerHTML += '<p>Domingo</p>'
+        corpo.style.background = `green`
+        break
+    case 1:
+        res.innerHTML +='<p>Segunda</p>'
+        corpo.style.background = `yello`
+        break
+    case 2:
+        res.innerHTML += '<p>Terça</p>'
+        corpo.style.background = `blue`
+        break
+    case 3:
+        res.innerHTML +='<p>Quarta</p>'
+        corpo.style.background = `grey`
+        break
+    case 4:
+        res.innerHTML +='<p>Quinta</p>'
+        corpo.style.background = `orange`
+        break
+    case 5:
+        res.innerHTML += '<p>Sexta</p>'
+        corpo.style.background = `pink`
+        break
+    case 6:
+        res.innerHTML +='<p>Sábado</p>'
+        corpo.style.background = `red`
+        break
+    default:
+        res.innerHTML += '<p>[ERRO]Dia inválido!</p>'
+        corpo.style.background = `brown`
+        break
+    }
+
+    </script>
+    
+</body>
+</html>

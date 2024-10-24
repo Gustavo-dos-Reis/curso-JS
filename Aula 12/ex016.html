@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data/Hora</title>
+</head>
+<body>
+    <div name = "txth" id = "txth">
+        
+    </div>
+    <div id="res">
+
+    </div>
+    <h1>Horário</h1>
+    
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours(txth)
+        res.innerHTML = `<p> Agora são exatamente ${hora} horas.</p>`
+        if (hora > 5 && hora < 12){
+            res.innerHTML += `<p>Bom dia!</p>`
+        } else if (hora > 12 && hora <= 18) {
+            res.innerHTML += `<p>Boa tarde!</p>`
+        } else if (hora <= 5){
+            res.innerHTML += `<p>Boa madrugada!</p>` } else {
+                res.innerHTML += `<p>Boa noite!</p>`
+            }
+    </script>
+    
+</body>
+</html>

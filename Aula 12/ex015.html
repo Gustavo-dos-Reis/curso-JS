@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasta de idade</title>   
+</head>
+<body>
+    <h1>Sistema para saber a idade</h1>
+   Página para saber se pode votar ou não:<input tape = "number" name ="txti" id ="txti">
+   <input type="button" value="Verificar" onclick="calcular()">
+    <div id = 'res'>
+
+    </div>
+
+    <script>
+        function calcular() {
+            var txtdd = document.getElementById('txti')
+            var res = document.getElementById('res')
+            var txtidd = Number(txtdd.value)
+            res.innerHTML = `<p>Você tem ${txtidd} anos.</p>`
+            if(txtidd < 16){
+                res.innerHTML += `<p>Não vota!</p>`
+            } else if (txtidd < 18 || txtidd > 65){
+                res.innerHTML += `<p> Voto opcional</p>`
+            } else{
+                res.innerHTML += `<p> Voto obrigatório</p>`
+            }
+            
+        
+        }
+    </script>
+    
+</body>
+</html>
